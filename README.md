@@ -5,6 +5,9 @@ This was initially made as a fan opening page for the clan website, but since th
 
 This code is way older than the repository itself, so please don't judge me too much. I might re-code that soon to make myself feel better with it.
 
+#### Preview
+**Remember to click on the lightsaber hilt, it does things!**
+
 [Click here to preview](https://wik-z.github.io/lightsaber-homepage)
 
 
