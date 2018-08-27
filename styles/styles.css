@@ -1,0 +1,169 @@
+@font-face {
+    font-family: "Trajan Pro";
+    src: url("../fonts/Trajan Pro Regular.ttf");
+}
+
+html,body {
+	padding:0px;
+	margin:0px;
+}
+
+body {
+	background:black;
+	background-color: black;
+	font-family:"Trajan Pro";
+	color:white;
+}
+
+#logo {
+	padding:10px 0px;
+	position:absolute;
+	width:100%;
+	top:180px;
+	text-align:center;
+	font-size:45px;
+	opacity:0;
+	transition-duration:0.5s;
+	box-shadow: 0px 0px 500px black inset;
+	text-shadow: 0px 0px 5px black;
+	z-index:-1;
+}
+#logo.lighted {
+	opacity:0.5;
+}
+
+#logo h1 {
+	margin:0px;
+}
+
+#logo h3 {
+	font-size:0.7em;
+	margin:0px;
+}
+
+audio {
+	display:none;
+}
+
+#lightsaber {
+	position:absolute;
+	left:70px;
+	top:100px;
+	z-index:60;
+}
+
+#lightsaber .ls-blade {
+	background:white;
+	width:10px;
+	height:0px;
+	border-radius: 7px 7px 2px 2px;
+	position:relative;
+	left:14px;
+	z-index:-1;
+	margin-top:450px;
+	animation:blade;
+	animation-delay:5s;
+	animation-duration:0.4s;
+	animation-fill-mode:forwards;
+	transition-duration:0.5s;
+	transition-property:box-shadow;
+	-webkit-animation:blade;
+	-webkit-animation-delay:5s;
+	-webkit-animation-duration:0.4s;
+	-webkit-animation-fill-mode:forwards;
+	-webkit-transition-duration:0.5s;
+	-webkit-transition-property:box-shadow;
+}
+
+#lightsaber .ls-hilt {
+	width:40px;
+	height:150px;
+	margin-top:-20px;
+	cursor:pointer;
+}
+
+.color-blue .ls-blade {
+	box-shadow: 0 0 5px #fff,0 0 8px #fff,0 0 12px #fff,0 0 15px blue,0 0 25px blue;
+}
+.color-purple .ls-blade {
+	box-shadow: 0 0 5px #fff,0 0 8px #fff,0 0 12px #fff,0 0 15px purple,0 0 25px purple;
+}
+.color-red .ls-blade {
+	box-shadow: 0 0 5px #fff,0 0 8px #fff,0 0 12px #fff,0 0 15px red,0 0 25px red;
+}
+.color-yellow .ls-blade {
+	box-shadow: 0 0 5px #fff,0 0 8px #fff,0 0 12px #fff,0 0 15px yellow,0 0 25px yellow;
+}
+.color-green .ls-blade {
+	box-shadow: 0 0 5px #fff,0 0 8px #fff,0 0 12px #fff,0 0 15px green,0 0 25px green;
+}
+
+.color-blue #logo {
+	background:#3939a8;
+}
+
+.color-red #logo {
+	background:#b33636;;
+}
+
+.color-yellow #logo {
+	background:#b0a100;
+}
+
+.color-green #logo {
+	background:#2bab03;
+}
+
+.color-purple #logo {
+	background:#727;
+}
+
+.code {
+	position:absolute;
+	top:350px;
+	width:100%;
+	text-align:center;
+	font-style:italic;
+}
+.code h4 {
+	transition-duration:1s;
+	color:#717171;
+	position:absolute;
+	top:0px;
+	opacity:1.0;
+	width:100%;
+}
+
+.hidden {
+	color:black;
+	opacity:0.0 !important;
+}
+
+#lightsaber .ls-hilt img {
+	max-width:100%;
+	max-height:100%;
+	width:100%;
+	height:100%;
+	z-index:66;
+	opacity:0;
+	animation:hilt;
+	animation-delay:5s;
+	animation-duration:0.2s;
+	animation-fill-mode:forwards;
+	filter:brightness(80%);
+	-webkit-animation:hilt;
+	-webkit-animation-delay:5s;
+	-webkit-animation-duration:0.2s;
+	-webkit-animation-fill-mode:forwards;
+	-webkit-filter:brightness(80%);
+}
+
+@keyframes blade {
+	from { height:0px; margin-top:450px; }
+	to { height:450px; margin-top:0px;}
+}
+
+@keyframes hilt {
+	from { opacity:0;}
+	to {opacity:0.9;}
+}

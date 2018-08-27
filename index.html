@@ -1,0 +1,54 @@
+<html>
+<head>
+	<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+	<title>White Ravens Jedi Order</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/styles.css" type="text/css" />
+</head>
+<body class="color-blue">
+	<div class="backgrounder"></div>
+	<div id="lightsaber">
+		<div class="ls-blade"></div>
+		<div class="ls-hilt"><img src="images/hilt.png" /></div>
+	</div>
+	<div id="logo">
+		<h1>WHITE RAVENS</h1>
+		<h3>Jedi Order</h3>
+	</div>
+	<div class="code">
+		<h4 class="hidden">There is no emotion, there is peace.</h4>
+		<h4 class="hidden">There is no ignorance, there is knowledge.</h4>
+		<h4 class="hidden">There is no passion, there is serenity.</h4>
+		<h4 class="hidden">There is no chaos, there is harmony.</h4>
+		<h4 class="hidden">There is no death, there is the Force.</h4>
+	</div>
+	
+	
+	
+	
+	
+	<audio controls autoplay>
+		<source src="sounds/music.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+		<script type="text/javascript">
+		var colors = ["blue", "purple", "yellow", "green", "red"];
+		var c = 0;
+		setTimeout(function() { $("#logo").addClass("lighted")}, 5000);
+		setTimeout(function() { $(".code h4:nth-child(1)").removeClass("hidden")}, 6000);
+		
+		$(".ls-hilt").click(function(){
+			$("body").removeClass("color-"+colors[c]);
+			if(c == 4)
+				c=0;
+			else
+				c++;
+
+			$(".code h4").addClass("hidden");
+			$(".code h4:nth-child("+(c+1)+")").removeClass("hidden");
+			$("body").addClass("color-"+colors[c]);
+		});
+	</script> 
+</body>
